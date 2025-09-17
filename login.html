@@ -1,0 +1,78 @@
+<style>
+    /* Reset body margin */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<section id="login" class="features" 
+    style="min-height: 100vh; display: flex; align-items: center; justify-content: center; 
+           background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+           url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); 
+           background-size: cover; background-repeat: no-repeat;">
+
+    <div class="login-container" 
+        style="max-width: 400px; width: 100%; margin: auto;">
+        <div class="login-card" 
+            style="background-color: rgba(255, 255, 255, 0.95); padding: 2.5rem; border-radius: var(--radius); 
+                   box-shadow: 0 20px 40px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
+
+            <div class="section-header" style="color: white; text-align: center; margin-bottom: 1.5rem;">
+                <h2 class="section-title" style="color: #059669;">Welcome Back</h2>
+                <p class="section-description" style="color: rgba(0, 0, 0, 0.7);">
+                    Sign in to access your crop predictions and farm analytics
+                </p>
+            </div>
+
+            <form class="login-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div>
+                    <label for="email" 
+                        style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary);">
+                        Email Address
+                    </label>
+                    <input type="email" id="email" required 
+                        style="width: 100%; padding: 1rem; border: 2px solid var(--border); 
+                               border-radius: var(--radius); font-size: 1rem; transition: border-color 0.3s ease;"
+                        placeholder="your@email.com"
+                        onfocus="this.style.borderColor='#059669'"
+                        onblur="this.style.borderColor='var(--border)'">
+                </div>
+
+                <div>
+                    <label for="password" 
+                        style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary);">
+                        Password
+                    </label>
+                    <input type="password" id="password" required 
+                        style="width: 100%; padding: 1rem; border: 2px solid var(--border); 
+                               border-radius: var(--radius); font-size: 1rem; transition: border-color 0.3s ease;"
+                        placeholder="••••••••"
+                        onfocus="this.style.borderColor='#059669'"
+                        onblur="this.style.borderColor='var(--border)'">
+                </div>
+
+                <!-- Remember me on first line -->
+                <div style="margin-bottom: 0.5rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" style="width: 1.1rem; height: 1.1rem; accent-color: #059669;">
+                        <span style="font-size: 0.9rem; font-weight: 500;">Remember me</span>
+                    </label>
+                </div>
+
+                <!-- Forgot password on separate line -->
+                <div style="margin-bottom: 1.5rem;">
+                    <a href="#forgot-password" 
+                       style="font-size: 0.9rem; color: #059669; text-decoration: none; font-weight: 500;">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <button type="submit" class="btn btn-emerald" 
+                    style="width: 100%; padding: 1rem; font-size: 1.1rem; font-weight: 600;">
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

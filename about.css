@@ -1,0 +1,132 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.nav{
+    height: 120px;
+    background-color: #f7f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-icon{
+    display: flex;
+    font-size: 2.5rem;
+}
+.nav-icon i{
+    margin-top: 25px;
+}
+.nav-icon h2{
+    font-size: 2.3rem;
+    margin-left: 5px;
+    margin-top: 25px;
+    color: black;
+}
+
+.nav-items{
+    display: flex;
+    color: gray;
+    font-size: 1rem; 
+    margin-top: 10px;   
+}
+.nav-items a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-signin{
+    display: flex;
+}
+.nav-signin h4{
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
+.nav-signin button{
+    color: #f7f9f9;
+    font-size: 0.95rem;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10%;
+    background-color: #00a676;
+    margin-left: 20px;
+}
+.nav-signin button:hover{
+    border: 3px solid green;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f5faf4 60%, #bfe1af 100%);
+    background-image: url(/about-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+main > div {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(7px);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(44, 48, 65, 0.08), 0 1.5px 3px 0 rgba(32, 168, 126, 0.05);
+    max-width: 480px;
+    width: 97%;
+    padding: 36px 30px 24px 30px;
+    margin: 14px 0;
+}
+
+h2 {
+    margin: 0 0 12px 0;
+    color: #00a676;
+    font-size: 1.24rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    margin: 0 0 16px 0;
+    color: #333d29;
+    font-weight: 500;
+    font-size: 1.045rem;
+    line-height: 1.5;
+    letter-spacing: 0.01rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 1.2em;
+    margin-bottom: 8px;
+    font-size: 1.02rem;
+}
+
+
+footer {
+    margin: 30px 0 0 0;
+}
+
+@media (max-width: 600px) {
+    main > div {
+        padding: 26px 8px 18px 8px;
+        max-width: 98vw;
+    }
+    header {
+        margin-top: 16px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
