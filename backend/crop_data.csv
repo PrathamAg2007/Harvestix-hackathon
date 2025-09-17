@@ -1,0 +1,7 @@
+Crop,BaseYield,BestSoil,RecommendedFertilizer,WaterNeed,PestResistance
+Wheat,3.5,Loamy,Nitrogen (Urea),Medium,Medium
+Rice,4.0,Clay,NPK + Potash,High,Low
+Maize,3.0,Sandy,Nitrogen + Compost,Medium,Low
+Cotton,2.5,Black,Nitrogen + Phosphorus,Medium,Medium
+Sugarcane,6.0,Alluvial,NPK + Organic Manure,High,Medium
+Pulses,2.0,Red,Phosphorus + Compost,Low,High

@@ -148,8 +148,43 @@ button:hover {
 }
 
 body{
-  background-image:url("/form-bg.jpg");
+  background-image:url("form-bg.jpg");
   background-size: cover ;
   margin: 0;
   padding: 0;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.results-table th, .results-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.results-table th {
+  background: #00a676;
+  color: #fff;
+  width: 25%;
+}
+
+.results-table tr:last-child td {
+  border-bottom: none;
+}
+
+.results-table ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.results-table ul li {
+  margin-bottom: 5px;
 }

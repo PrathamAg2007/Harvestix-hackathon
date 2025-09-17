@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #601700; */
+}
+
+.nav{
+    height: 120px;
+    background-color: #f7f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-icon{
+    display: flex;
+    font-size: 2.5rem;
+}
+.nav-icon h2{
+    font-size: 2.3rem;
+    margin-left: 5px;
+}
+
+.nav-items{
+    display: flex;
+    color: gray;
+    font-size: 1rem;    
+}
+.nav-items a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-signin{
+    display: flex;
+}
+.nav-signin h4{
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
+.nav-signin button{
+    color: #f7f9f9;
+    font-size: 0.95rem;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10%;
+    background-color: #00a676;
+    margin-left: 20px;
+}
+.nav-signin button:hover{
+    border: 3px solid green;
+}
+
+.hero-image{
+    background-image: url(heroimage.avif);
+    background-size: cover;
+    height: 650px;
+}
+
+.hero-contents{
+    display: inline-block;
+    color: #f7f9f9;
+    width: 100%;
+    margin-top: 7%;
+}
+.hero-contents h2{
+    font-size: 3rem;
+    margin-left: 8%;
+}
+.hero-contents p{
+    margin-left: 8%;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.predict button{
+    background-color: yellow;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 8%;
+}
+
