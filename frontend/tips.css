@@ -1,104 +1,170 @@
 /* Tips Page */
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-.nav{
-    height: 120px;
-    background-color: #f7f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.nav-icon{
-    display: flex;
-    font-size: 2.5rem;
-}
-.nav-icon h2{
-    font-size: 2.3rem;
-    margin-left: 5px;
-}
-
-.nav-items{
-    display: flex;
-    color: gray;
-    font-size: 1rem;    
-}
-.nav-items a{
-    margin-left: 20px;
-    text-decoration: none;
+/* Navbar */
+.nav {
+  height: 12vh; /* responsive */
+  background-color: #f7f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
-.nav-signin{
-    display: flex;
+.nav-icon {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
 }
-.nav-signin h4{
-    margin-top: 8px;
-    font-size: 1.2rem;
-}
-.nav-signin button{
-    color: #f7f9f9;
-    font-size: 0.95rem;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: 10%;
-    background-color: #00a676;
-    margin-left: 20px;
-}
-.nav-signin button:hover{
-    border: 3px solid green;
+.nav-icon h2 {
+  font-size: 1.8rem;
+  margin-left: 0.5rem;
 }
 
-body{
-    background-image: url(tips.jpg);
-    background-size: cover;
-    height: 600px;
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+.nav-items a {
+  text-decoration: none;
+  color: gray;
+  transition: color 0.3s ease;
+}
+.nav-items a:hover {
+  color: #00a676;
 }
 
+.nav-signin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-signin h4 {
+  font-size: 1rem;
+}
+.nav-signin button {
+  color: #f7f9f9;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00a676;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav-signin button:hover {
+  border: 2px solid green;
+  background-color: #00945f;
+}
 
+/* Page background */
+body {
+  background-image: url(tips.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* Tips Section */
 .tips {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 5% 5%;
+  text-align: center;
 }
 
 .tips h1 {
-    color: #2e7d32;
-    margin-bottom: 10px;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .tips p {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #555;
 }
 
+/* Tips grid */
 .tips-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin: 0 auto;
-    max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 .tip-card {
-    background: #fff;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    transition: 0.3s;
-    text-align: center;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: 0.3s;
+  text-align: center;
 }
 
 .tip-card:hover {
-    border-color: #2e7d32;
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: #2e7d32;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .tip-card .icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* 📱 Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .tips h1 {
+    font-size: 1.7rem;
+  }
+
+  .tips p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-icon h2 {
+    font-size: 1.4rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .tips {
+    padding: 2rem 1rem;
+  }
+
+  .tips h1 {
+    font-size: 1.4rem;
+  }
+
+  .tips p {
+    font-size: 0.9rem;
+  }
 }

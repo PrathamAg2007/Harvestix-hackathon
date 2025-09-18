@@ -9,6 +9,38 @@ CORS(app)
 # Load dataset
 crop_data = pd.read_csv("crop_data.csv")
 
+users = {}
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    data = request.json
+    email = data.get("email")
+    password = data.get("password")
+    name = data.get("name", "User")
+
+    if email in users:
+        return jsonify({"error": "User already exists"}), 400
+
+    users[email] = {"password": password, "name": name}
+    return jsonify({"message": "Signup successful", "name": name})
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    email = data.get("email")
+    password = data.get("password")
+
+    user = users.get(email)
+    if user and user["password"] == password:
+        return jsonify({"message": "Login successful", "name": user["name"]})
+    elif not user:
+        # Auto-create account if user doesn't exist
+        username = email.split("@")[0]  # take part before @ as name
+        users[email] = {"password": password, "name": username}
+        return jsonify({"message": "Account created & logged in", "name": username})
+    else:
+        return jsonify({"error": "Invalid credentials"}), 401
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json  

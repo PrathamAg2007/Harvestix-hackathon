@@ -22,8 +22,8 @@
           <a href="tips.html">Tips</a>
           <a href="about.html">About</a>
       </div>
-      <div class="nav-signin">
-          <h4>Sign In</h4>
+      <div class="nav-signin" id="navUser">
+          <h4><a href="login.html">Sign In</a></h4>
           <a href="login.html"><button>Get started</button></a>
       </div>
   </div>
@@ -133,6 +133,20 @@
 
 <!-- Script to connect frontend with backend -->
 <script>
+
+  const username = localStorage.getItem("username");
+  if (username) {
+    document.getElementById("navUser").innerHTML = `
+    <h4>👋 Hello, ${username}</h4>
+    <button onclick="logout()">Logout</button>
+    `;
+  }
+
+  function logout() {
+    localStorage.removeItem("username");
+    window.location.href = "index.html";
+  }
+
   document.getElementById("cropForm").addEventListener("submit", function(event) {
     event.preventDefault();
 

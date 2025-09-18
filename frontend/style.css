@@ -1,88 +1,172 @@
-*{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: #601700; */
+/* Reset */
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
-.nav{
-    height: 120px;
-    background-color: #f7f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+body {
+  line-height: 1.5;
+  background-color: #fff;
 }
 
-.nav-icon{
-    display: flex;
-    font-size: 2.5rem;
-}
-.nav-icon h2{
-    font-size: 2.3rem;
-    margin-left: 5px;
-}
-
-.nav-items{
-    display: flex;
-    color: gray;
-    font-size: 1rem;    
-}
-.nav-items a{
-    margin-left: 20px;
-    text-decoration: none;
+/* Navbar */
+.nav {
+  height: 12vh; /* responsive height */
+  background-color: #f7f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%; /* spacing adjusts on screen */
 }
 
-.nav-signin{
-    display: flex;
+.nav-icon {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
 }
-.nav-signin h4{
-    margin-top: 8px;
-    font-size: 1.2rem;
+.nav-icon h2 {
+  font-size: 1.8rem;
+  margin-left: 0.5rem;
 }
-.nav-signin button{
-    color: #f7f9f9;
+
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+  flex-wrap: wrap; /* stack if small screen */
+}
+.nav-items a {
+  text-decoration: none;
+  color: gray;
+  transition: color 0.3s ease;
+}
+.nav-items a:hover {
+  color: #00a676;
+}
+
+.nav-signin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-signin h4 {
+  font-size: 1rem;
+}
+.nav-signin button {
+  color: #f7f9f9;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00a676;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav-signin button:hover {
+  border: 2px solid green;
+  background-color: #00945f;
+}
+
+/* Hero Section */
+.hero-image {
+  background-image: url(heroimage.avif);
+  background-size: cover;
+  background-position: center;
+  height: 90vh; /* flexible with viewport */
+  display: flex;
+  align-items: center;
+}
+
+.hero-contents {
+  display: flex;
+  flex-direction: column; /* stack elements vertically */
+  align-items: flex-start; /* keep text & button aligned left */
+  color: #f7f9f9;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.hero-contents h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-contents p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem; /* add spacing before button */
+}
+
+.predict button {
+  background-color: yellow;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.predict button:hover {
+  background-color: #ffd700;
+}
+
+/* 📱 Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .nav-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .hero-contents h2 {
+    font-size: 2rem;
+  }
+
+  .hero-contents p {
     font-size: 0.95rem;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: 10%;
-    background-color: #00a676;
-    margin-left: 20px;
-}
-.nav-signin button:hover{
-    border: 3px solid green;
+  }
 }
 
-.hero-image{
-    background-image: url(heroimage.avif);
-    background-size: cover;
-    height: 650px;
-}
+/* Mobiles */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
 
-.hero-contents{
-    display: inline-block;
-    color: #f7f9f9;
+  .nav-icon h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-contents h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-contents p {
+    font-size: 0.9rem;
+  }
+
+  .predict button {
     width: 100%;
-    margin-top: 7%;
-}
-.hero-contents h2{
-    font-size: 3rem;
-    margin-left: 8%;
-}
-.hero-contents p{
-    margin-left: 8%;
-    margin-top: 20px;
-    font-weight: 700;
-}
-
-.predict button{
-    background-color: yellow;
-    font-weight: 700;
     font-size: 1rem;
-    height: 40px;
-    width: 150px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 50px;
-    margin-left: 8%;
+  }
 }
-
